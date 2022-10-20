@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+</head>
+<body>
+<form>
+    <tr>
+        <td>姓名：</td>
+        <td>
+            <input type="text" name="name" placeholder="请输入你的姓名">
+        </td>
+    </tr><br/>
+    <tr>
+        <td>年龄：</td>
+        <td>
+            <input type="text" name="age" placeholder="请输入你的年龄">
+        </td>
+    </tr><br/>
+    <tr>
+        <td>性别：</td>
+        <td>
+            <input type="radio" name="sex" value="0"><img src="p/man.png">男士
+
+            <input type="radio" name="sex" value="1"><img src="p/woman.png">女士
+        </td><br/>
+    <tr>
+        <td>生日：</td>
+        <td>
+            <select name="year" size="1">
+                <option value="0">--请选择年份--</option>
+            </select>
+            <select name="month" size="1">
+                <option value="0">--请选择月份--</option>
+            </select>
+            <select name="day" size="1">
+                <option value="0">--请选择日--</option>
+            </select>
+        </td>
+    </tr><br/>
+    <tr>
+        <td>爱好：</td>
+        <td>
+            <input type="checkbox">阅读
+            <input type="checkbox">跑步
+            <input type="checkbox">游泳
+            <input type="checkbox">健身
+        </td>
+    </tr><br/>
+    <tr>
+        <td>个人介绍：</td><br/>
+        <td>
+            <textarea name="comment" rows="5" cols="30" placeholder="请输入你的个人介绍："></textarea>
+        </td>
+    </tr><br/>
+    <tr>
+        <td>
+            <input type="checkbox">我同意信息录入
+        </td>
+    </tr><br/>
+    <tr>
+        <td>
+            <input type="submit" value="立即注册">
+            <input type="reset" value="重新输入">
+        </td>
+    </tr>
+</form>
+
+</body>
+</html>
