@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数字电子时钟</title>
+</head>
+<style>
+  p {
+
+    font-size: 80px;
+    color: deepskyblue;
+      margin-left: 100px;
+      margin-top: 50px;
+      float: left;
+  }
+  .box{
+      width: 1200px;
+      height: 300px;
+      margin-top: 300px;
+      margin-left: 300px;
+      border-radius: 200px;
+      border-style: solid;
+      color: red;
+      background-color: #90fe01;
+
+
+  }
+  .box1{
+      margin-left: 100px;
+      margin-top: 50px;
+      width: 1000px;
+      height: 200px;
+      border-radius: 100px;
+      border-style: solid;
+      color: red;
+      float: left;
+      background-color: #dddddd;
+  }
+</style>
+<body>
+<script>
+     var myVar = setInterval(myfunction, 1000);
+  function myfunction() {
+    var d = new Date();
+      var x = document.getElementById("time");
+      x.innerHTML=d.toLocaleString();
+  }
+</script>
+<div class="box">
+    <div class="box1">
+        <p id="time"></p>
+    </div>
+</div>
+
+
+</body>
+</html>
