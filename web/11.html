@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    function checkFrm() {
+        checkuser();
+        checkPwd();
+        checkPwd2();
+        return checkPwd()&&checkPwd2()&&checkuser();
+    }
+    function checkuser(){
+        var usernameValue = document.getElementById("username").value;
+        var span = document.getElementById("usernamespan");
+        if (document.getElementById("username").value.length==0) {
+            span.innerHTML="用户名不能为空";
+            span.style.color="red";
+            return false;
+        }
+    }
+    //验证密码
+    function checkPwd() {
+        //获取用户获得用户名信息
+        var upwd = document.getElementById("pwd").value;
+        //创建校验规则,密码要求6-8位，首位为字母，后面5-7位是数字
+        var reg = /^[a-z]\w{5,7}$/;
+        //获取span对象
+        var span = document.getElementById("pwdSpan");
+        //开始交验
+        if (document.getElementById("pwd").value.length==0) {
+            //输入校验结果
+            span.innerHTML = "密码不能为空";
+            span.style.color = "red";
+            return false;
+        } else if (reg.test(upwd)) {
+            //输入校验结果
+            span.innerHTML = "密码通过";
+            span.style.color = "green";
+            return true;
+        } else {
+            //输入校验结果
+            span.innerHTML = "密码格式不符"
+            span.style.color = "red";
+            return false;
+        }
+        //第一次密码为a123456，第二次密码为a1234567，则修改的第一次密码，确认密码也会重新校验
+        checkPwd2();
+    }
+    //校验确认密码
+    function checkPwd2() {
+        //获取第一次校验密码
+        var pwd = document.getElementById("pwd").value;
+        //获取确认密码
+        var pwd2 = document.getElementById("pwd2").value;
+        //获取span对象
+        var span = document.getElementById("pwd2Span");
+        //比较前两次密码是否相同
+        if (document.getElementById("pwd2").value.length==0) {
+            //输入校验结果
+            span.innerHTML = "密码不能为空";
+            span.style.color = "red";
+            return false;
+        } else if (pwd === pwd2) {
+            //输入校验结果
+            span.innerHTML = "密码通过";
+            span.style.color = "green";
+            return true;
+        } else {
+            //输入校验结果
+            span.innerHTML = "密码不同，请重新输入"
+            span.style.color = "red";
+            return false;
+        }
+    }
+</script>
+<style>
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        border-radius: 50px;
+    }
+
+    body {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .rg_layout {
+        width: 430px;
+        height: 460px;
+        margin: auto;
+        background-color: rgba(159, 255, 245, 0.95);
+        border: 8px solid #e8ecf0;
+        margin-top: 30px;
+    }
+
+    .rg_center {
+
+        width: 450px;
+        float: left;
+        margin-top: 100px;
+    }
+
+    .td_left {
+        width: 100px;
+        text-align: right;
+        height: 45px;
+    }
+
+    .td_right {
+
+        padding-left: 15px;
+    }
+
+    #username,
+    #pwd2,
+    #pwd{
+        width: 251px;
+        height: 32px;
+        border: 1px solid #A6A6;
+        border-radius: 5px;
+        padding-left: 10px;
+    }
+
+    #btn-sub {
+        width: 150px;
+        height: 40px;
+        background-color: #00CCFF;
+        border: 1px solid #00CCFF;
+        border-radius: 5px;
+        margin-top: 80px;
+    }
+
+</style>
+<body>
+<div class="rg_layout">
+
+    <div class="rg_center">
+        <form action="#" method="get" onsubmit="return checkFrm()">
+            <table>
+                <tbody>
+                <tr>
+                    <td class="td_left">
+                        <label>用户名：</label>
+                    </td>
+                    <td class="td_right">
+                        <input type="text" name="username" id="username" value="" placeholder="请输入用户名" onblur="checkuser()">
+                        <span id="usernamespan"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_left">
+                        <label> 密码： </label>
+                    </td>
+                    <td class="td_right">
+                        <input type="password" name="pwd" id="pwd" value="" placeholder="请输入密码" onblur="checkPwd()">
+                        <span id="pwdSpan"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_left">
+                        <label>确认密码：</label>
+                    </td>
+                    <td class="td_right">
+                        <input type="password" name="pwd2" id="pwd2" value="" placeholder="两次密码必须相同" onblur=" checkPwd2()">
+                        <span id="pwd2Span"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="注册" id="btn-sub"></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
