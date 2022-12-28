@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+	<title>我的物品</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/myBookshelf.css">
+</head>
+<body>
+	<!-- 导航条 -->
+	<nav class="navbar">
+		<div class="nav-menu">
+			<ul class="menu">
+				<li><a class="active" href="index.html">首页</a></li>
+				<li><a href="#">二手良品</a></li>
+				<li><a href="#">求物区</a></li>
+				<li><a href="#">服务区</a></li>
+			</ul>				
+		</div><!-- nav-menu -->
+
+		<form class="nav-search">
+			<input type="search" class="searchIn" placeholder="搜物品...">
+			<button class="search-logo"><img src="img/search2.png"></button>
+		</form>
+
+		<div class="nav-info">
+			<a href="myBookshelf.html" class="username">刘鑫承</a>
+			<a href="myBookshelf.html" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的物品</a>
+			<a href="login.html" class="logout">[ 退 出 ]</a>
+		</div> <!-- nav-info-end -->
+	</nav>
+
+	<!-- 个人信息 -->
+	<div class="person-info">
+		<p>
+			<a href="#" class="name">刘鑫承</a>
+		</p>
+		<p>
+			<a href="#" class="sex">男</a><img src="img/girl.png" id="sex-pic">
+		</p>
+		<p class="set">
+			<a href="#" class="edit">编辑个人主页</a>
+			<img class="set-icon" src="img/setting.png">
+		</p>
+		<div class="contact">
+			<p>
+				<span class="call-icon"></span>
+				联&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系：
+				<a href="#" class="num">123456789</a></p>
+			<p>
+				<span class="address-icon"></span>
+				住&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：<a href="#"  class="address">D12男寝</a>
+			</p>
+			<p>
+				<span class="major-icon"></span>
+				年级专业：<a  href="#" class="major">21级网络工程21201班</a>
+			</p>
+		</div>
+	</div><!-- person-info-end -->
+
+	<!-- 书摊和求书选项卡 -->
+	<div class="card-btn">
+		<span title="sell-book" id="sell-btn" class="active">我的物品</span>
+		<span title="ask-book" id="ask-btn">我的求物</span>
+		<p class="upload-icon"></p>
+		<a id="sell-upload" href="sellUpload.html">上传物品至平台</a>
+		<a id="ask-upload" href="1.html">上传求物信息</a>
+		<a id="delete-book" href="#">删除二手物品</a>
+	</div>
+
+	<!-- 我的书摊 -->
+	<div id="container">
+		<div id="sell-book">
+			<ul class="book-ul">
+				<li class="book-list">
+					<p class="book-pic">
+						<img src="img/book-list/article/1.png">
+					</p>
+					<h5 class="book-name">vivo手机</h5>
+					<form>
+						<input type="text" name="book-id" class="book-id" value="2">
+					</form>
+					<span class="delete-btn"></span>
+					<span class="edit-btn"></span>
+					<div class="book-detail">
+						<p>原&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span class="original-price">￥3800</span></p>
+						<p>售&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span class="book-price">￥1299</span></p>
+						<p>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相：<span class="book-condition">八五品</span></p>
+						<p>商品描述：<span class="book-desc">外观有点磨损,但并不影响使用</span></p>
+					</div>
+				</li>
+				<li class="book-list">
+					<p class="book-pic">
+						<img src="img/book-list/article/2.png">
+					</p>
+					<h5 class="book-name">篮球</h5>
+					<form>
+						<input type="text" name="book-id" class="book-id" value="3">
+					</form>
+					<span class="delete-btn"></span>
+					<span class="edit-btn"></span>
+					<div class="book-detail">
+						<p>原&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span class="original-price">￥122.0</span></p>
+						<p>售&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span class="book-price">￥61.9</span></p>
+						<p>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相：<span class="book-condition">八五品</span></p>
+						<p>商品描述：<span class="book-desc">可以正常使用</span></p>
+					</div>
+				</li>
+
+				<li class="book-list">
+					<p class="book-pic">
+						<img src="img/book-list/article/3.png">
+					</p>
+					<h5 class="book-name">自行车</h5>
+					<form>
+						<input type="text" name="book-id" class="book-id" value="4">
+					</form>
+					<span class="delete-btn"></span>
+					<span class="edit-btn"></span>
+					<div class="book-detail">
+						<p>原&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span class="original-price">￥1299.0</span></p>
+						<p>售&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span class="book-price">￥566.9</span></p>
+						<p>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相：<span class="book-condition">八五品</span></p>
+						<p>商品描述：<span class="book-desc">可以正常使用</span></p>
+					</div>
+				</li>
+
+				<li class="book-list">
+					<p class="book-pic">
+						<img src="img/book-list/article/15.png">
+					</p>
+					<h5 class="book-name">鸭舌帽</h5>
+					<form>
+						<input type="text" name="book-id" class="book-id" value="5">
+					</form>
+					<span class="delete-btn"></span>
+					<span class="edit-btn"></span>
+					<div class="book-detail">
+						<p>原&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span class="original-price">￥52.0</span></p>
+						<p>售&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span class="book-price">￥12.9</span></p>
+						<p>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相：<span class="book-condition">八五品</span></p>
+						<p>商品描述：<span class="book-desc">保存较好</span></p>
+					</div>
+				</li>
+				
+				<li class="book-list">
+					<p class="book-pic">
+						<img src="img/book-list/article/13.png">
+					</p>
+					<h5 class="book-name">小音箱</h5>
+					<form>
+						<input type="text" name="book-id" class="book-id" value="1">
+					</form>
+					<span class="delete-btn"></span>
+					<span class="edit-btn"></span>
+					<div class="book-detail">
+						<p>原&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span class="original-price">￥52.0</span></p>
+						<p>售&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span class="book-price">￥12.9</span></p>
+						<p>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相：<span class="book-condition">八五品</span></p>
+						<p>商品描述：<span class="book-desc">可以正常使用</span></p>
+					</div>
+				</li>
+			</ul>
+		</div> <!-- sell-book-end -->
+
+		<!-- 我的求书 -->
+		<div id="ask-book">
+			<ul class="book-ul">
+				<li class="book-list">
+					<p class="book-pic">
+						<img src="img/book-list/article/5.png">
+					</p>
+					<h5 class="book-name">运动器材</h5>
+					<span class="edit-btn"></span>
+					<div class="book-detail">
+						<p>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相：<span class="book-condition">八五品</span></p>
+					</div>
+				</li>
+				<li class="book-list">
+					<p class="book-pic">
+						<img src="img/book-list/article/6.png">
+					</p>
+					<h5 class="book-name">滑板</h5>
+					<span class="edit-btn"></span>
+					<div class="book-detail">
+						<p>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相：<span class="book-condition">八五品</span></p>
+					</div>
+				</li>
+				<li class="book-list">
+					<p class="book-pic">
+						<img src="img/book-list/article/7.png">
+					</p>
+					<h5 class="book-name">平板</h5>
+					<span class="edit-btn"></span>
+					<div class="book-detail">
+						<p>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相：<span class="book-condition">八五品</span></p>
+					</div>
+				</li>
+				<li class="book-list">
+					<p class="book-pic">
+						<img src="img/book-list/article/8.png">
+					</p>
+					<h5 class="book-name">内存条</h5>
+					<span class="edit-btn"></span>
+					<div class="book-detail">
+						<p>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相：<span class="book-condition">八五品</span></p>
+					</div>
+				</li>
+				<li class="book-list">
+					<p class="book-pic">
+						<img src="img/book-list/article/9.png">
+					</p>
+					<h5 class="book-name">显示器</h5>
+					<span class="edit-btn"></span>
+					<div class="book-detail">
+						<p>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相：<span class="book-condition">八五品</span></p>
+					</div>
+				</li>												
+			</ul>
+		</div><!-- ask-book-end-->		
+	</div> <!-- container-end -->
+
+	<footer>
+		<a href="#">©2022-2021 二手物品交易</a>
+		<a href="#">意见反馈&nbsp;&nbsp;&nbsp;联系我们&nbsp;&nbsp;&nbsp;隐私权声明&nbsp;&nbsp;&nbsp;使用条款</a>
+	</footer>
+	
+	<!-- javascript- -->
+	<script type="text/javascript" src="js/jquery-3.2.js"></script>
+	<script type="text/javascript" src="js/myBookshelf.js"></script>
+			
+</body>
+</html>
